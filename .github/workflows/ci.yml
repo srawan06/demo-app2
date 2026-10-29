@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  call-shared-ci:
+    uses: srawan06/shared-workflows/.github/workflows/python-ci.yml@v1
+    with:
+      app-name: demo-app-2
+      python-version: "3.11"
